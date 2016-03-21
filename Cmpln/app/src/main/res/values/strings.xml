@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cmpln</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="signupUserHint">Sign up with your edu email</string>
+    <string name="signupPwd">Password</string>
+    <string name="signupCfmPwd">Confirm Password</string>
+    <string name="signInHint"><u>Already have an account?</u></string>
+    <string name="SignUp">Go</string>
+    <string name="service_terms">By creating an account you agree to our Terms of Service and Privacy Policy</string>
+    <string name="title_activity_login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Go</string>
+    <string name="title_activity_comment">Comment</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="avatar_hint">Choose anonymous avatar</string>
+    <string name="bio_hint">Your Bio:</string>
+    <string name="title_activity_post">post</string>
+    <string name="feedback_email">mathura1987@gmail.com</string>
+
+    <string name="track_event">Track Event</string>
+    <string name="track_crash">Track Crash</string>
+
+    <string-array name="settings_array">
+        <item>Edit Profile</item>
+        <item>Support</item>
+        <item>Logout</item>
+        <item>Choose to Follow</item>
+    </string-array>
+    <string-array name="support_menu">
+        <item>Rate Our App</item>
+        <item>Send us Feedback</item>
+        <item>Delete Account</item>
+        <item>About Cmpln</item>
+        <item>Privacy Policy</item>
+        <item>Terms of Service</item>
+    </string-array>
+
+    <string name="title_activity_delete_account">DeleteAccount</string>
+    <string name="title_activity_support">Support</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
+    <string name="title_activity_photo">Photo</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Push Notifications</string>
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+    <string name="already_registered">Device is already registered on server.</string>
+    <string name="gcm_registered">From GCM: device successfully registered!</string>
+    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
+    <string name="gcm_message">From GCM: you got message!</string>
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>
+    <string name="server_registered">From Demo Server: successfully added device!</string>
+    <string name="server_unregistered">From Demo Server: successfully removed device!</string>
+    <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+    <string name="title_activity_reply">Reply</string>
+    <string name="title_activity_choose_to_follow">ChooseToFollow</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="title_activity_edit">Edit</string>
+    <string name="title_activity_edit_comment">EditComment</string>
+
+</resources>

@@ -1,0 +1,56 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:id="@+id/scroll_login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        android:orientation="vertical">
+    <EditText
+        android:layout_marginTop="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:id="@+id/editTextLoginEmail" />
+        <EditText
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:background="@drawable/edittextstyle"
+            android:ems="10"
+            android:id="@+id/editTextLoginPassword" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="right"
+            android:background="@drawable/edittextstyle"
+            android:text="@string/login"
+            android:onClick="SignIn"
+            android:textColor="#FFFFFF"
+            android:id="@+id/buttonSignUp" />
+    </LinearLayout>
+    </ScrollView>

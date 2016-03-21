@@ -1,0 +1,83 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:id="@+id/scroll">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:paddingBottom="50dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:onClick="AvatarPopup"
+        android:src="@drawable/profileavatar"
+        android:id="@+id/imageViewAvatarIcon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="10sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/avatar_hint"
+        android:textColor="#FFFFFF"
+        android:id="@+id/textViewAvatarHint" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:inputType="textPersonName"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="10sp"
+        android:paddingLeft="10dp"
+        android:hint="User Name"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:id="@+id/editTextUserName" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/bio_hint"
+        android:textSize="10sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/textViewBioHint" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:maxLength="150"
+        android:background="@drawable/edittextstyle"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editTextBio" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:onClick="BioUpdate"
+        android:src="@drawable/profileupdate"
+        android:id="@+id/imageViewProfileUpdate"
+        android:layout_weight="0.05" />
+
+</LinearLayout>
+    </ScrollView>

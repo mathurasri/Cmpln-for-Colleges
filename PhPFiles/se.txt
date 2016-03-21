@@ -1,0 +1,94 @@
+
+<?php
+$response = array();
+if (isset($_POST['university'] ) && isset($_POST['username']))
+{
+	$mysql_db = 'cmpln';
+	$university= $_POST['university'];	
+	$username = $_POST['username'];
+	$followflag1 = 0;
+	$followflag2 = 0;
+	$conn = mysql_connect('db.cmpln.com','complain', 'trashtalk');
+	$response["usercomments"] = array();
+	if(!$conn)
+	{
+		die("Could not connect.");
+	}
+	//$sql = "SELECT comments.comment, comments.comment_id, UserProfile.avatarPosition, comments.username, comments.server_time_posted FROM comments inner join UserProfile on comments.email=UserProfile.email where comments.university = '$university' order by comments.time_posted desc LIMIT $start, $count ";		
+	
+	$sql = "SELECT DISTINCT comments.username FROM comments WHERE comments.username not in(SELECT following FROM follows WHERE followed_by = '$username') AND comments.university = '$university' AND comments.username != '$username'";
+	mysql_select_db($mysql_db) or die("Could not connect to DB.");
+	$retval = mysql_query($sql, $conn);	
+	if(!empty($retval))
+	{
+		if (mysql_num_rows($retval) > 0)
+		{			
+			while($row = mysql_fetch_array($retval))
+			{
+				$comment = array();
+				$comment["username"] = $row["username"];
+				$comment["followflag"] = 0;
+				$followflag1 = 1;			
+				array_push($response["usercomments"], $comment);
+			}
+			//$response["success"] = 1;
+			//echo json_encode($response);
+			/*$retval = mysql_fetch_array($retval);	
+			//echo $retval["imagePath"];
+			$response["success"] = 1;
+			$response["message"] = "User image downloaded";
+			$response["imageUri"] = (String)$retval["imagePath"];
+			//$response["imageUri"] = "Test";
+			echo json_encode($response);			*/
+		}
+			
+		
+	}	
+	$sql = "SELECT following FROM follows WHERE followed_by='$username'";
+	mysql_select_db($mysql_db) or die("Could not connect to DB.");
+	$retval = mysql_query($sql, $conn);	
+	if(!empty($retval))
+	{
+		if (mysql_num_rows($retval) > 0)
+		{			
+			while($row = mysql_fetch_array($retval))
+			{
+				$comment = array();
+				$comment["username"] = $row["following"];
+				$comment["followflag"] = 1;
+				$followflag2 = 1;			
+				array_push($response["usercomments"], $comment);
+			}
+			//$response["success"] = 1;
+			//echo json_encode($response);
+			/*$retval = mysql_fetch_array($retval);	
+			//echo $retval["imagePath"];
+			$response["success"] = 1;
+			$response["message"] = "User image downloaded";
+			$response["imageUri"] = (String)$retval["imagePath"];
+			//$response["imageUri"] = "Test";
+			echo json_encode($response);			*/
+		}
+			
+		
+	}
+		
+	if($followflag1 == 1 || $followflag2 == 1){
+		$response["success"] = 1;
+		echo json_encode($response);
+	}
+	else{
+		$response["success"] = 0;
+		echo json_encode($response);
+	}
+	mysql_close($conn);
+}
+else
+{
+	$response["success"] = 0;
+	$response["message"] = "could not download the image";
+	$response["imageUri"] = "No image present";
+	echo json_encode($response);
+}
+
+?>

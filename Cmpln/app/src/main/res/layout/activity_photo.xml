@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.instamour.mathu.cmpln.Photo"
+    android:background="@android:color/transparent">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:id="@+id/linearLayout">
+
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/transparent">
+
+        </LinearLayout>
+
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@android:color/transparent">
+
+    </LinearLayout>
+   </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelPhoto"
+        android:text="Cancel Photo"
+        android:background="@android:color/white"
+        android:textColor="#00CED1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/existingPhoto"
+        android:text="Choose Existing Photo"
+        android:background="@android:color/white"
+        android:textColor="#00CED1"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/cancelPhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/takePhoto"
+        android:text="Take Photo"
+        android:background="@android:color/white"
+        android:textColor="#00CED1"
+        android:layout_marginBottom="2dp"
+        android:layout_above="@+id/existingPhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_above="@+id/cancelPhoto"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/cancelPhoto"
+        android:id="@+id/linearLayout2">
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="dp"
+        android:layout_above="@+id/cancelPhoto"
+        android:layout_centerHorizontal="true"></LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <resources>
+
+
+
+        <!-- Enable automatic Activity measurement -->
+        <bool name="ga_autoActivityTracking">true</bool>
+
+        <!--  The property id associated with this analytics tracker -->
+        <string name="ga_trackingId">UA-70735300-1</string>
+
+
+
+        <bool name="ga_reportUncaughtExceptions">true</bool>
+
+
+    </resources>
+</resources>
